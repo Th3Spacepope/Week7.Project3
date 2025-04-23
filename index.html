@@ -10,9 +10,9 @@
     <button type="button" id="start">Start</button>
     <button type="button" id="stop">Stop</button>
   </h1>
-  Master Gain
+  <h3>Master Gain</h3>
   <div>
-   <label for="masterGain"></label>
+    <label for="masterGain"></label>
     <input
       id="masterGain"
       type="range"
@@ -22,25 +22,34 @@
       value="-12.0"
     />
     <label id="masterGainLabel" for="masterGain">-12.0 dBFS</label>
-  </div> 
   </div>
   <body>
-    Synth
+    <h4>Synth</h4>
     <div>
-      <label for="freq">Frequency</label> 
-      <input id="freq" type="range" min="60" max="4000" step="1" value="440"/>
-      <label id="freqLabel" for="freq">440 hz</label> 
+      <label for="freq">Frequency</label>
+      <input id="freq" type="range" min="60" max="4000" step="1" value="440" />
+      <label id="freqLabel" for="freq">440 hz</label>
     </div>
+    <h4>Wave Type</h4>
+
     <div>
-      Wave Type
-    </div>
-    <div>
-      <input id="sine" type="radio" name="wave" value="sine"/>
+      <input id="sine" type="radio" name="wave" value="sine" />
       <label for="sine">Sine</label>
-      <input id="square" type="radio" name="wave" value="square"/>
+      <input id="square" type="radio" name="wave" value="square" />
       <label for="square">Square</label>
-      <input id="triangle" type="radio" name="wave" value="triangle"/>
-      <label for="triangle">Triangle</label>      
+      <input id="triangle" type="radio" name="wave" value="triangle" />
+      <label for="triangle">Triangle</label>
+    </div>
+    <h4>Tremolo</h4>
+    <div>
+      <label for="depth">Depth</label>
+      <input id="depth" type="range" min="1" max="100" step="1" value="50" />
+      <label id="depthLabel" for="depth">50%</label>
+    </div>
+    <div>
+      <label for="tremFreq">Tremolo Frequency</label>
+      <input id="tremFreq" type="range" min="0" max="10" step="0.1" value="1" />
+      <label id="tremFreqLabel" for="tremFreq">1Hz</label>
     </div>
   </body>
 </html>
