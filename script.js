@@ -8,8 +8,9 @@ const dBtoA = function (linAmp) {
 
 //create oscillator
 let myOsc = audCtx.createOscillator();
-myOsc.type = "square";
-myOsc.frequency.value = 0;
+myOsc.type = "sine";
+myOsc.frequency.value = 440;
+//myOsc.start();
 
 //create tremolo osc
 let tremOsc = audCtx.createOscillator();
@@ -56,10 +57,17 @@ const updateWaveType3 = function () {
 };
 
 const start = function () {
+  let amp = dBtoA(masterFader.value);
+  audCtx.resume();
   myOsc.start();
+
+  masterGain.gain.exponentialRampToValueAtTime(amp, audCtx.currentTime + 0.5);
 };
 const stop = function () {
-  myOsc.stop();
+  masterGain.gain.exponentialRampToValueAtTime(
+    0.0001,
+    audCtx.currentTime + 0.5
+  );
 };
 
 //HTML Elements
