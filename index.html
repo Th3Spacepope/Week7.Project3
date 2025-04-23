@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synth+Tremolo</title>
+    <script type="module" src="script.js"></script>
+  </head>
+  <h1>
+    <button type="button" id="start">Start</button>
+    <button type="button" id="stop">Stop</button>
+  </h1>
+  Master Gain
+  <div>
+   <label for="masterGain"></label>
+    <input
+      id="masterGain"
+      type="range"
+      min="-70.0"
+      max="6.0"
+      step=".1"
+      value="-12.0"
+    />
+    <label id="masterGainLabel" for="masterGain">-12.0 dBFS</label>
+  </div> 
+  </div>
+  <body>
+    Synth
+    <div>
+      <label for="freq">Frequency</label> 
+      <input id="freq" type="range" min="60" max="4000" step="1" value="440"/>
+      <label id="freqLabel" for="freq">440 hz</label> 
+    </div>
+    <div>
+      Wave Type
+    </div>
+    <div>
+      <input id="sine" type="radio" name="wave" value="sine"/>
+      <label for="sine">Sine</label>
+      <input id="square" type="radio" name="wave" value="square"/>
+      <label for="square">Square</label>
+      <input id="triangle" type="radio" name="wave" value="triangle"/>
+      <label for="triangle">Triangle</label>      
+    </div>
+  </body>
+</html>
